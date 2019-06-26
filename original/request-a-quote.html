@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<?php include "sitecake/2.2.10/server/Sitecake/Site.php"; ?>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --><title>Request A Quote | Vertical Fix - Aerial Arts Group</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/vertical-fix-styles.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --><!-- WARNING: Respond.js doesn't work if you view the page via file:// --><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="request-a-quote-page">
+
+<div class="container-fluid navigation-container-fluid">
+    <div class="navigation-container">
+        <nav class="col-xs-12 col-sm-12 col-md-2"><a id="nav-logo" href="index.html" title="Back to the home page">
+            <img src="images/logo-nav-vertical-fix.png" title="Vertical Fix Logo"></a>
+        </nav>
+        <nav class="main-nav col-xs-12 col-sm-12 col-md-8 hidden-xs"><a href="the-experience.html" title="The Experience">The Experience</a>
+            <a href="entertainment.html" title="Entertainment">Entertainment</a>
+            <a href="media.html" title="Media">Media</a>
+            <a href="request-a-quote.html" title="Request a Quote">Request a Quote</a>
+            <a href="about-us.html">About Us</a>
+        </nav>
+        <nav class="social-media-nav col-xs-12 col-sm-12 col-md-2"><!-- Dropdown -->
+            <div class="btn-group hidden-md hidden-lg">
+                <button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-menu-hamburger"></span> Menu</button>
+                <ul class="dropdown-menu">
+                    <li><a href="the-experience.html" title="The Experience">The Experience</a></li>
+                    <li><a href="entertainment.html" title="Entertainment">Entertainment</a></li>
+                    <li><a href="media.html" title="Media">Media</a></li>
+                    <li><a href="request-a-quote.html" title="Request a Quote">Request a Quote</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                </ul>
+            </div>
+
+            <a class="social-media-icon social-media-icon-facebook" href="https://www.facebook.com/theverticalfix" title="Facebook" target="_blank">
+                <img src="images/icon-social-media-facebook.png" alt="Follow us on Facebook"></a>
+            <a class="social-media-icon social-media-icon-instagram" href="https://instagram.com/verticalfix/" title="Instagram" target="_blank">
+                <img src="images/icon-social-media-instagram.png" alt="Follow us on Instagram"></a>
+        </nav>
+    </div>
+</div>
+
+<div id="request-a-quote-container" class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-1 sc-content">
+            <h1>Request a Quote</h1>
+
+            <p>Vertical Fix takes great pride in custom showcase productions which are perfect for award ceremonies, holiday parties, corporate events and much more.  Sit back and let us make your event the most memorable experience your
+                guests will be talking about for years to come!</p>
+
+            <div class="hr"></div>
+            <div class="request-a-quote-form-container">
+                <!-- FORM -->
+                <form id="ajax-contact" method="post" action="scripts/mailer.php">
+                    <fieldset class="col-xs-12 col-sm-6">
+                        <select id="typeOfEvent" name="typeOfEvent">
+                            <option value="No Type of Event Specified">What type of events?</option>
+                            <option value="Corporate Events">Corporate Events</option>
+                            <option value="Production and Theatre">Production and Theatre</option>
+                            <option value="Nightlife Entertainment">Nightlife Entertainment</option>
+                            <option value="Private Parties and Special Events">Private Parties and Special Events
+                            </option>
+                        </select><label for="typeOfEvent">Type of Event</label>
+                    </fieldset>
+                    <fieldset class="col-xs-12 col-sm-6">
+                        <select id="numberOfGuests" name="numberOfGuests">
+                            <option value="No Number of Guests Specified">How many guests?</option>
+                            <option value="1 to 50"> 1 to 50</option>
+                            <option value="51 to 100">51 to 100</option>
+                            <option value="101 to 250">101 to 250</option>
+                            <option value="251 to 500">251 to 500</option>
+                            <option value="500 to 1000">500 to 1000</option>
+                            <option value="1000 to 2500">1000 to 2500</option>
+                            <option value="2501 to 5000">2501 to 5000</option>
+                            <option value="5001+">5001+</option>
+                        </select><label for="numberOfGuests">Number of Guests</label>
+                    </fieldset>
+                    <fieldset class="col-xs-12">
+                        <p><strong>I am interested in the following entertainment options:</strong></p>
+                    </fieldset>
+                    <fieldset class="col-xs-12 col-md-6 no-margin">
+                        <ul>
+                            <li>
+                                <input id="optionDancers" name="entertainmentOptions[]" value="Dancers" type="checkbox"><label for="optionDancers">Dancers</label>
+                            </li>
+                            <li>
+                                <input id="optionAerialists" name="entertainmentOptions[]" value="Aerialists" type="checkbox"><label for="optionAerialists">Aerialists</label>
+                            </li>
+                            <li>
+                                <input id="optionAerialBartending" name="entertainmentOptions[]" value="Aerial Bartending" type="checkbox"><label for="optionAerialBartending">Aerial Bartending</label>
+                            </li>
+                            <li>
+                                <input id="optionEventDesignProduction" name="entertainmentOptions[]" value="Event Design and Production" type="checkbox"><label for="optionEventDesignProduction">Event Design &amp; Production</label>
+                            </li>
+                            <li>
+                                <input id="optionFirePerformers" name="entertainmentOptions[]" value="Fire Performers" type="checkbox"><label for="optionFirePerformers">Fire Performers</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="col-xs-12 col-md-6 no-margin">
+                        <ul>
+                            <li>
+                                <input id="optionAcrobats" name="entertainmentOptions[]" value="Acrobats" type="checkbox"><label for="optionAcrobats">Acrobats</label>
+                            </li>
+                            <li>
+                                <input id="optionHulaHoopers" name="entertainmentOptions[]" value="Hula Hoopers" type="checkbox"><label for="optionHulaHoopers">Hula Hoopers</label>
+                            </li>
+                            <li>
+                                <input id="optionStiltWalkers" name="entertainmentOptions[]" value="Stilt Walkers" type="checkbox"><label for="optionStiltWalkers">Stilt Walkers</label>
+                            </li>
+                            <li>
+                                <input id="optionLivingTable" name="entertainmentOptions[]" value="Living Table" type="checkbox"><label for="optionLivingTable">Living Table</label>
+                            </li>
+                            <li>
+                                <input id="optionOther" name="entertainmentOptions[]" value="Other" type="checkbox"><label for="optionOther">Other</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="col-xs-12">
+                        <div class="hr"></div>
+
+                        <input id="companyOrganization" name="companyOrganization" type="text" placeholder="Company/Organization"><label for="companyOrganization">Company or
+                        Organization</label>
+                    </fieldset>
+                    <fieldset class="col-xs-12">
+                        <input id="fullName" name="fullName" type="text" placeholder="Full name..."><label for="fullName">Full Name</label>
+                    </fieldset>
+                    <fieldset class="col-xs-12 col-sm-6">
+                        <input id="emailAddress" name="emailAddress" type="text" placeholder="E-mail address..."><label for="emailAddress">E-mail Address</label>
+                    </fieldset>
+                    <fieldset class="col-xs-12 col-sm-6">
+                        <input id="phoneNumber" name="phoneNumber" type="text" placeholder="(123) 456-7890..."><label for="phoneNumber">Phone Number</label>
+                    </fieldset>
+                    <fieldset class="col-xs-12">
+                        <textarea id="messageBox" name="messageBox" placeholder="Additional information..."></textarea><label for="messageBox">Additional
+                        Information</label>
+                    </fieldset>
+                    <fieldset class="col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1">
+                        <div id="form-messages"></div>
+
+                        <button type="submit">Request a Quote</button>
+                    </fieldset>
+                </form>
+
+                <div class="successMessage">
+                    <h3>Thanks for reaching out!</h3>
+
+                    <p>We will get back to you shortly</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-sm-offset-1">
+            <div class="alternative-contact-information sc-content">
+                <small>Headquarters</small>
+                <p>7425 South Harl Avenue<br>Suite #3<br>Tempe, AZ 85283</p>
+
+                <div class="hr"></div>
+                <p class="phone-number">(623) 850-8155</p>
+                <a href="mailto:info@theverticalfix.com" title="E-mail info@theverticalfix.com">info@theverticalfix.com</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <nav class="col-xs-12 col-xs-offset-0 col-md-10 col-md-offset-1 hidden-xs"><a href="the-experience.html" title="The Experience">The Experience</a>
+            <a href="entertainment.html" title="Entertainment">Entertainment</a>
+            <a href="media.html" title="Media">Media</a>
+            <a href="request-a-quote.html" title="Request a Quote">Request a Quote</a>
+            <a href="about-us.html">About Us</a>
+            <a href="http://www.theverticalfix.com/" title="Vertical Fix Studio" target="_blank">Vertical Fix Studio</a>
+        </nav>
+        <div class="sc-content col-xs-12">
+            <p>2015 © Vertical Fix. All Rights Reserved.</p>
+        </div>
+
+    </footer>
+</div>
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/mailer.js"></script>
+</body>
+</html>

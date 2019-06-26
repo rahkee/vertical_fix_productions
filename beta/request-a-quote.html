@@ -1,0 +1,165 @@
+<?php include "sitecake/2.2.10/server/Sitecake/Site.php"; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Request A Quote | Vertical Fix - Aerial Arts Group</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/vertical-fix-styles.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="request-a-quote-page">
+
+<div class="container-fluid navigation-container-fluid">
+    <div class="navigation-container">
+        <nav class="col-xs-12 col-sm-12 col-md-2">
+            <a id="nav-logo" href="index.html" title="Back to the home page">
+                <img src="images/logo-nav-vertical-fix.png" title="Vertical Fix Logo">
+            </a>
+        </nav>
+
+        <nav class="col-xs-12 col-sm-12 col-md-8">
+            <a href="the-experience.html" title="The Experience">The Experience</a>
+            <a href="entertainment.html" title="Entertainment">Entertainment</a>
+            <a href="media.html" title="Media">Media</a>
+            <a class="selected" href="request-a-quote.html" title="Request a Quote">Request a Quote</a>
+            <a href="about-us.html">About Us</a>
+        </nav>
+
+        <nav class="social-media-nav col-xs-12 col-sm-12 col-md-2">
+            <a href="https://www.facebook.com/theverticalfix" title="Facebook" target="_blank">
+                <img src="images/icon-social-media-facebook.png" alt="Follow us on Facebook">
+            </a>
+            <a href="https://instagram.com/verticalfix/" title="Instagram" target="_blank">
+                <img src="images/icon-social-media-instagram.png" alt="Follow us on Instagram">
+            </a>
+            <a href="" title="Twitter" target="_blank">
+                <img src="images/icon-social-media-twitter.png" alt="Follow us on Twitter">
+            </a>
+        </nav>
+    </div>
+</div>
+
+<div id="request-a-quote-container" class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-1 sc-content">
+            <h1>Request a Quote</h1>
+            <p>In mollis metus consequat maximus consectetur. Nulla gravida leo et lacinia congue. Suspendisse convallis elementum molestie. Fusce et tempus odio, non commodo leo. Suspendisse ut risus lacinia elit convallis convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur commodo enim venenatis massa luctus fermentum.</p>
+
+            <div class="hr"></div>
+
+            <div class="request-a-quote-form-container">
+                <!-- FORM -->
+                <form id="ajax-contact" method="post" action="scripts/mailer.php">
+                    <fieldset class="col-xs-12 col-sm-6">
+                        <select id="typeOfEvent" name="typeOfEvent">
+                            <option>What type of events?</option>
+                        </select>
+                        <label for="typeOfEvent">Type of Events</label>
+                    </fieldset>
+                    <fieldset class="col-xs-12 col-sm-6">
+                        <select id="numberOfGuests" name="numberOfGuests">
+                            <option>How many guests?</option>
+                        </select>
+                        <label for="numberOfGuests">Number of Guests</label>
+                    </fieldset>
+                    <fieldset class="col-xs-12">
+                        <p><strong>I am interested in the following entertainment options:</strong></p>
+                    </fieldset>
+                    <fieldset class="col-xs-12 col-md-6 no-margin">
+                        <ul>
+                            <li><input id="optionDancers" name="optionDancers" type="checkbox"><label for="optionDancers">Dancers</label></li>
+                            <li><input id="optionAerialists" name="optionAerialists" type="checkbox"><label for="optionAerialists">Aerialists</label></li>
+                            <li><input id="optionWaterPerformances" name="optionWaterPerformances" type="checkbox"><label for="optionWaterPerformances">Water Performances</label></li>
+                            <li><input id="optionDesignProduction" name="optionDesignProduction" type="checkbox"><label for="optionDesignProduction">Design and/or Production</label></li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="col-xs-12 col-md-6 no-margin">
+                        <ul>
+                            <li><input id="optionFirePerformers" name="optionFirePerformers" type="checkbox"><label for="optionFirePerformers">Fire Performers</label></li>
+                            <li><input id="optionAcrobats" name="optionAcrobats" type="checkbox"><label for="optionAcrobats">Acrobats</label></li>
+                            <li><input id="optionMusicalActs" name="optionMusicalActs" type="checkbox"><label for="optionMusicalActs">Musical Acts</label></li>
+                            <li><input id="optionOther" name="optionOther" type="checkbox"><label for="optionOther">Other</label></li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="col-xs-12">
+                        <div class="hr"></div>
+
+                        <input id="companyOrganization" name="companyOrganization" type="text" placeholder="Company/Organization">
+                        <label for="companyOrganization">Company or Organization</label>
+                    </fieldset>
+                    <fieldset class="col-xs-12">
+                        <input id="fullName" name="fullName" type="text" placeholder="Full name...">
+                        <label for="fullName">Company or Organization</label>
+                    </fieldset>
+                    <fieldset class="col-xs-12 col-sm-6">
+                        <input id="emailAddress" name="emailAddress" type="text" placeholder="E-mail address...">
+                        <label for="emailAddress">E-mail Address</label>
+                    </fieldset>
+                    <fieldset class="col-xs-12 col-sm-6">
+                        <input id="phoneNumber" name="phoneNumber" type="text" placeholder="(123) 456-7890...">
+                        <label for="phoneNumber">Phone Number</label>
+                    </fieldset>
+                    <fieldset class="col-xs-12">
+                        <textarea id="messageBox" name="messageBox" placeholder="Additional information..."></textarea>
+                        <label for="messageBox">Additional Information</label>
+                    </fieldset>
+                    <fieldset class="col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1">
+                        <div id="form-messages"></div>
+
+                        <button type="submit">Request a Quote</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-sm-offset-1">
+            <div class="logo-container">
+                <a href="index.html" title="Home | Vertical Fix">
+                    <img src="images/logo-nav-vertical-fix.png" alt="Vertical Fix Logo">
+                </a>
+            </div>
+            <div class="alternative-contact-information sc-content">
+                <small>Headquarters</small>
+                <p>7425 South Harl Avenue Tempe, AZ 85283</p>
+
+                <div class="hr"></div>
+
+                <h1>(623) 850-8155</h1>
+                <a href="mailto:info@theverticalfix.com" title="E-mail info@theverticalfix.com">info@theverticalfix.com</a>
+
+                <nav class="social-media-nav">
+                    <a href="https://www.facebook.com/theverticalfix" title="Facebook" target="_blank">
+                        <img src="images/icon-social-media-facebook.png" alt="Follow us on Facebook">
+                    </a>
+                    <a href="https://instagram.com/verticalfix/" title="Instagram" target="_blank">
+                        <img src="images/icon-social-media-instagram.png" alt="Follow us on Instagram">
+                    </a>
+                    <a href="" title="Twitter" target="_blank">
+                        <img src="images/icon-social-media-twitter.png" alt="Follow us on Twitter">
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <footer class="sc-content">
+        <p>2015 &copy; Vertical Fix. All Rights Reserved.</p>
+    </footer>
+</div>
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/mailer.js"></script>
+</body>
+</html>

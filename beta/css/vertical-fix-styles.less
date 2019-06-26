@@ -1,0 +1,427 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700|Playfair+Display);
+
+@purple: #6600ff;
+@dark-purple: #24005b;
+
+html, body {
+    font-family: Raleway, sans-serif;
+}
+
+body {
+    background-color: black;
+    background-position: left top;
+    background-repeat: no-repeat;
+
+    &#about-us-page, &#request-a-quote-page {
+        background-image: url("../images/bg-about-us.jpg");
+
+        @media screen and (min-width: 1366px) {
+            background-image: url("../images/bg-about-us-reverse.jpg");
+            background-position: right top;
+        }
+    }
+
+    &#the-experience-page, &#media-page, &#entertainment-page {
+        background-image: url("../images/bg-purple.jpg");
+    }
+}
+
+.navigation-container-fluid {
+    background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+    padding-bottom: 40px;
+}
+
+.navigation-container {
+    margin: 0 auto;
+    max-width: 1280px;
+
+    nav {
+        height: 150px;
+
+        @media screen and (max-width: 991px) {
+
+            height: auto;
+        }
+    }
+}
+
+a {
+    font-weight: bold;
+    transition: color .5s;
+
+    &:focus, &:hover, &.selected {
+        color: @purple;
+        outline: none;
+        text-decoration: none;
+    }
+
+    &.btn-request-a-quote {
+        background-color: @dark-purple;
+        color: white;
+        display: block;
+        font-size: 2rem;
+        padding: 15px;
+        text-transform: uppercase;
+        transition: background-color .3s;
+
+        &:hover {
+            background-color: @purple;
+
+        }
+    }
+}
+
+.border {
+    // border: 10px rgba(102, 0, 255, .25) solid;
+    border: 10px @dark-purple solid;
+    margin-bottom: 30px;
+}
+
+fieldset {
+    margin: 10px 0;
+
+    select, option, label {
+        padding: 5px;
+        width: 100%;
+    }
+
+    input[type="text"], textarea {
+        padding: 10px;
+        width: 100%;
+    }
+
+    label {
+        color: white;
+        font-size: 1rem;
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        label {
+            font-size: 1.6rem;
+            text-transform: none;
+            width: auto;
+
+            @media screen and (max-width: 1200px) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    button {
+        background-color: @dark-purple;
+        border: 0;
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 15px;
+        text-transform: uppercase;
+        transition: background-color .3s;
+        width: 100%;
+
+        &:hover {
+            background-color: @purple;
+        }
+    }
+}
+
+h1, h2 {
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 5px black;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+h2 {
+    border-bottom: 2px white solid;
+    padding-bottom: 5px;
+}
+
+p {
+    color: white;
+    text-shadow: 0 0 5px black;
+
+    &.preface {
+        font-size: 1.8rem;
+    }
+}
+
+.hr {
+    border-bottom: 2px white solid;
+    margin: 30px 0 60px;
+}
+
+nav {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    min-height: 75px !important;
+    text-align: center;
+    text-transform: uppercase;
+
+    a {
+        color: white;
+        font-size: 2rem;
+        padding: 5px;
+
+        &#nav-logo {
+            padding-top: 20px;
+        }
+
+        @media screen and (max-width: 1180px) {
+            font-size: 1.6rem;
+        }
+
+        @media screen and (max-width: 991px) {
+            font-size: 2rem;
+        }
+    }
+
+    &.social-media-nav {
+        justify-content: center;
+        min-height: auto;
+    }
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.video-container {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+
+    @media screen and (max-width: 991px) {
+        position: relative;
+    }
+}
+
+video {
+    width: 100%;
+}
+
+#about-us-container {
+
+    #testimonials {
+
+        p {
+            font-family: "Playfair Display", serif;
+        }
+    }
+
+    #performance-venues {
+        margin-top: 40px;
+
+        .locations {
+            margin-top: 20px;
+            padding: 0;
+        }
+
+        p {
+            font-weight: bold;
+        }
+    }
+}
+
+#media-container {
+
+    img {
+        width: 100%;
+    }
+
+    video {
+        border: 10px @dark-purple solid;
+    }
+}
+
+#request-a-quote-page {
+
+    .request-a-quote-form-container {
+        margin-bottom: 100px;
+        overflow: auto;
+    }
+
+    .hr {
+        margin: 30px 0;
+    }
+
+    .logo-container {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    small {
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .alternative-contact-information {
+
+        p {
+            font-size: 2.6rem;
+            line-height: 3rem;
+        }
+
+        h1, a {
+            display: block;
+            text-align: center;
+        }
+
+        a {
+            color: white;
+            font-size: 2.4rem;
+
+            @media screen and (max-width: 990px) {
+                font-size: 1.8rem;
+            }
+        }
+
+        .social-media-nav {
+            margin-top: 15px;
+        }
+    }
+}
+
+#form-messages {
+    color: white;
+    display: none;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+
+    &.success, &.error {
+        display: block;
+    }
+
+    &.error {
+        color: red;
+    }
+}
+
+.vertical-fix-service-box {
+    border: 10px @dark-purple solid;
+    border-bottom: none;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: border-color .3s;
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+
+    p {
+        background-color: @dark-purple;
+        font-size: 2.2rem;
+        font-weight: bold;
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: background-color .3s;
+    }
+
+    &:hover {
+        border-color: @purple;
+
+        p {
+            background-color: @purple;
+        }
+    }
+}
+
+footer {
+    padding: 50px 0;
+    text-align: center;
+
+    p {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+}
+
+/*******************************/
+/***** BOOTSTRAP OVERRIDES *****/
+/*******************************/
+
+.modal {
+    background-image: url('../images/bg-modal-gradient.png');
+    background-position: center top;
+}
+
+.modal-dialog {
+    margin: 0;
+    width: 100%;
+}
+
+.modal-content {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.modal-header, .modal-body, .modal-footer {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 15px 0;
+}
+
+.modal-header {
+    border-bottom: none;
+    padding-bottom: 0;
+    padding-left: 15px;
+
+    h1 {
+        line-height: normal;
+        width: 80%;
+    }
+
+    button.close {
+        opacity: 1;
+        position: absolute;
+        right: 20px;
+        text-shadow: none;
+        top: 20px;
+    }
+
+    span.glyphicon {
+        color: white;
+        font-size: 4rem;
+    }
+}
+
+.modal-body {
+    overflow: auto;
+
+    img {
+        width: 100%;
+    }
+}
+
+.modal-footer {
+    border-top: none;
+    margin-bottom: 100px;
+    text-align: center;
+}
